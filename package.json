@@ -1,0 +1,16 @@
+{
+  "name": "atpanyuniverse-web",
+  "description": "Layla's agentic rewrite for portfolio page",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint script.js --max-warnings 999",
+    "format": "prettier --write \"*.{js,css,html}\"",
+    "format:check": "prettier --check \"*.{js,css,html}\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0"
+  }
+}

@@ -11,7 +11,7 @@ Panyu’s personal portfolio site at atpanyuniverse.co. Single-page site with se
 - Frontend: Static HTML/CSS/JS
 - Styling: plain CSS
 - Hosting: GitHub Pages (CNAME: atpanyuniverse.co)
-- Tooling: ~
+- Tooling: npm, ESLint, Prettier
 
 ## Features
 
@@ -27,9 +27,8 @@ Panyu’s personal portfolio site at atpanyuniverse.co. Single-page site with se
 
 ## Changelog
 
-
-| Date       | Change                           |
-| ---------- | -------------------------------- |
-| 2026-03-13 | Initial spec created for rewrite |
+| Date       | Commit | Change                           |
+| ---------- | ------ | -------------------------------- |
+| 2026-03-13 | —      | Initial spec created for rewrite |
 
 
