@@ -10,7 +10,7 @@ Panyu’s personal portfolio site at atpanyuniverse.co. Single-page site with se
 
 - Frontend: Static HTML/CSS/JS
 - Styling: plain CSS
-- Hosting: GitHub Pages (CNAME: atpanyuniverse.co)
+- Hosting: GitHub Pages (default *.github.io URL)
 - Tooling: npm, ESLint, Prettier
 
 ## Features
@@ -23,12 +23,13 @@ Panyu’s personal portfolio site at atpanyuniverse.co. Single-page site with se
 - Work/portfolio section with categories (code vs others)
 - Contact section (form or links)
 - Animations for headings, skills, and scroll
-- GitHub Pages deploy pipeline and CNAME support
+- GitHub Pages deploy pipeline (default URL)
 
 ## Changelog
 
 | Date       | Commit | Change                           |
 | ---------- | ------ | -------------------------------- |
 | 2026-03-13 | —      | Initial spec created for rewrite |
+| 2026-03-13 | —      | Host on default GitHub Pages URL; docs/HOSTING.md |
 
 
