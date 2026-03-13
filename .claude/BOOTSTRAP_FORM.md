@@ -8,10 +8,10 @@
 ## 1. Project Identity
 
 ```
-Project name:       ~
-Short description:  ~
-Primary language:   ~        # e.g. TypeScript, Python, Go
-Target platform:    ~        # e.g. web, mobile-web, desktop, API-only
+Project name:       atpanyuniverse-web
+Short description:  Layla's agentic rewrite for portfolio page
+Primary language:   CSS, HTML, JavaScript
+Target platform:    mobile-web
 ```
 
 ---
@@ -19,12 +19,12 @@ Target platform:    ~        # e.g. web, mobile-web, desktop, API-only
 ## 2. Repository Structure
 
 ```
-Structure:          ~        # monorepo | polyrepo | single-app
+Structure: polyrepo 
 # monorepo   → frontend/ backend/ packages/ all in one repo
 # polyrepo   → separate repos per service (agent will only scaffold one at a time)
 # single-app → no backend, frontend only (or backend only)
 
-Top-level dirs:     ~        # only for monorepo — e.g. apps/web, apps/api, packages/ui
+Top-level dirs: ~        
 ```
 
 ---
@@ -32,13 +32,13 @@ Top-level dirs:     ~        # only for monorepo — e.g. apps/web, apps/api, pa
 ## 3. Frontend
 
 ```
-Include frontend:   ~        # yes | no
+Include frontend:   yes        # yes | no
 
-Framework:          ~        # Next.js | Remix | SvelteKit | Nuxt | Vite+React | Vue | none
-Styling:            ~        # Tailwind | CSS Modules | styled-components | UnoCSS | none
-Component lib:      ~        # shadcn/ui | Radix | MUI | Chakra | none
-State management:   ~        # Zustand | Jotai | Redux Toolkit | React Query | none
-Auth (frontend):    ~        # NextAuth | Clerk | Supabase Auth | none
+Framework:          ~        
+Styling: CSS Modules
+Component lib:      ~        
+State management:   ~        
+Auth (frontend):    ~       
 ```
 
 ---
@@ -46,7 +46,7 @@ Auth (frontend):    ~        # NextAuth | Clerk | Supabase Auth | none
 ## 4. Backend
 
 ```
-Include backend:    ~        # yes | no
+Include backend:    yes       
 
 Runtime:            ~        # Node.js | Python | Go | Rust | none
 Framework:          ~        # Express | Fastify | Hono | FastAPI | Django | Gin | none
@@ -96,7 +96,7 @@ Notify on:          ~        # commit | pr | never  (when agent should pause for
 ## 8. Team & Context
 
 ```
-Solo or team:       ~        # solo | team
+Solo or team:       solo     
 Main branch:        ~        # main | master
 Protected branches: ~        # e.g. main, staging
 Code review:        ~        # required | optional | none
