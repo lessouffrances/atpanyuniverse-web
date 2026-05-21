@@ -258,20 +258,17 @@
     <div class="container contact" id="contact">
         <h1>Contact</h1>
         <form id="myForm">
-            <input id="myName" type="text" name="name" placeholder="First Name | Last Name">
-            <input id="myEmail" type="email" placeholder="Email">
-
-            <input type="email" placeholder="email@example.com" disabled>
+            <input id="myName" type="text" name="name" placeholder="Firstname | Lastname">
+            <input id="myEmail" type="email" name="email" placeholder="Email">
+            <input id="mySubject" type="text" name="subject" placeholder="Subject">
             <textarea id="myMessage" name="message" cols="30" rows="10" placeholder="Message"></textarea>
-            <button id="mySubmit">Submit</button>
+            <button type="button" id="mySubmit">Submit</button>
         </form>
     </div>
 
     <div class="overlay" id="overlay"></div>
     <div class="modal" id="modal">
-        <p>Submit button pressed!
-        <br><br>
-        </p>
+        <p id="modalMessage">Submit button pressed!</p>
         <button onclick="closeModal()">Close</button>
     </div>
 
@@ -280,6 +277,7 @@
         <p>2023 Copyright. All Rights Reserved</p>
     </footer>
 
+    <script src="config.js"></script>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <!-- Include GSAP from CDN -->

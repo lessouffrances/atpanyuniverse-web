@@ -73,21 +73,59 @@ function closeModal() {
     document.getElementById('overlay').style.display = 'none';
 }
 
-let myName;
-let myEmail;
-let myMessage;
+const contactApiUrl = window.CONTACT_API_URL || 'http://localhost:3001/api/contact';
 
-document.getElementById("mySubmit").onclick = function () {
-    myName = document.getElementById("myName").value;
-    myEmail = document.getElementById("myEmail").value;
-    myMessage = document.getElementById("myMessage").value;
+function setModalMessage(text) {
+    document.getElementById('modalMessage').textContent = text;
+}
 
-    console.log('Full Name:', myName);
-    console.log('Email:', myEmail);
-    console.log('Message:', myMessage); 
+function setSubmitLoading(isLoading) {
+    const submitButton = document.getElementById('mySubmit');
+    submitButton.disabled = isLoading;
+    submitButton.textContent = isLoading ? 'Sending...' : 'Submit';
+}
 
-    showModal();
-};
+document.getElementById('myForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+});
+
+document.getElementById('mySubmit').addEventListener('click', async function () {
+    const name = document.getElementById('myName').value.trim();
+    const email = document.getElementById('myEmail').value.trim();
+    const subject = document.getElementById('mySubject').value.trim();
+    const message = document.getElementById('myMessage').value.trim();
+
+    if (!name || !email || !subject || !message) {
+        setModalMessage('Please fill in your name, email, subject, and message.');
+        showModal();
+        return;
+    }
+
+    setSubmitLoading(true);
+
+    try {
+        const response = await fetch(contactApiUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, subject, message }),
+        });
+
+        const data = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+            throw new Error(data.error || 'Unable to send your message.');
+        }
+
+        document.getElementById('myForm').reset();
+        setModalMessage('Thanks! Your message was sent successfully.');
+        showModal();
+    } catch (error) {
+        setModalMessage(error.message || 'Something went wrong. Please try again.');
+        showModal();
+    } finally {
+        setSubmitLoading(false);
+    }
+});
 
 
 
